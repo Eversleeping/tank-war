@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM"],
+    "types": ["node", "vite/client"],
+    "noEmit": true
+  },
+  "include": [
+    "server/**/*.ts",
+    "src/game/**/*.ts",
+    "src/multiplayer/protocol.ts",
+    "src/multiplayer/simulation/**/*.ts",
+    "src/storage/antiCheat.ts"
+  ]
+}

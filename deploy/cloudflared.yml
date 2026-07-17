@@ -1,0 +1,8 @@
+# Replace these placeholders in a private deployment copy.
+tunnel: YOUR_TUNNEL_UUID
+credentials-file: /root/.cloudflared/YOUR_TUNNEL_UUID.json
+
+ingress:
+  - hostname: tankwar.example.com
+    service: http://127.0.0.1:80
+  - service: http_status:404

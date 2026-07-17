@@ -1,0 +1,24 @@
+[Unit]
+Description=Tankwar multiplayer and leaderboard server
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/tankwar
+Environment=NODE_ENV=production
+Environment=PORT=8787
+Environment=HOST=127.0.0.1
+Environment=LB_DATA=/var/lib/tankwar/leaderboard.json
+ExecStart=/usr/bin/pnpm run server
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/var/lib/tankwar
+
+[Install]
+WantedBy=multi-user.target

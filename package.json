@@ -1,0 +1,30 @@
+{
+  "name": "tankwar",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && tsc -p tsconfig.server.json && vite build",
+    "typecheck:server": "tsc -p tsconfig.server.json",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "latency:multiplayer": "node scripts/multiplayer-latency.mjs",
+    "server": "tsx server/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/ws": "^8.18.1",
+    "@vitest/coverage-v8": "4.0.18",
+    "jsdom": "28.0.0",
+    "tsx": "^4.23.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1",
+    "vitest": "4.0.18"
+  },
+  "dependencies": {
+    "ws": "^8.21.0"
+  }
+}
